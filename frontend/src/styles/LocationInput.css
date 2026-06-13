@@ -1,0 +1,82 @@
+.location-wrapper {
+  position: relative; 
+  width: 100%;
+}
+
+.location-input-box {
+  position: relative;
+}
+
+.location-loading {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  animation: spin 1s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  from { transform: translateY(-50%) rotate(0deg); }
+  to   { transform: translateY(-50%) rotate(360deg); }
+}
+
+.location-dropdown {
+  position: absolute;
+  top: calc(100% + 4px); 
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.location-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.location-option:hover,
+.location-option--active {
+  background: #f5f3ff; 
+}
+
+.location-pin {
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: rgb(139, 139, 245);
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.location-city {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.location-region {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.location-dropdown::-webkit-scrollbar       { width: 4px; }
+.location-dropdown::-webkit-scrollbar-track { background: transparent; }
+.location-dropdown::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 99px; }

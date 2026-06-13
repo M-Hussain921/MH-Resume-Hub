@@ -1,0 +1,369 @@
+/* OVERLAY WITH GLASSMORPHISM EFFECT */
+.ats-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.6); /* Soft dark slate */
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; 
+  padding: 20px;
+}
+
+/* PREMIUM CONTAINER DESIGN */
+.ats-modal {
+  width: 100%;
+  max-width: 580px;
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* CLEAN SCROLLABLE CONTAINER */
+.ats-modal-body {
+  padding: 0 24px;
+  overflow-y: auto;
+  scrollbar-width: none;      
+  -ms-overflow-style: none;    
+}
+
+.ats-modal-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* STICKY HEADER WITH BORDER */
+.ats-header {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ats-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.ats-close-btn {
+  background: #f8fafc;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ats-close-btn:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+  transform: rotate(90deg);
+}
+
+/* VISUAL SCORE CIRCLE CENTRALIZATION */
+.ats-score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+.ats-circle-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ats-circle-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ats-score-num-group {
+  display: flex;
+  align-items: baseline;
+}
+
+.ats-score-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ats-score-100 {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.ats-score-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.ats-score-message {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+  text-align: center;
+}
+
+/* MODERN AI SUGGESTION BUTTON & CARD */
+.ats-ai-section {
+  margin: 20px 0;
+}
+
+.ats-ai-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease;
+}
+
+.ats-ai-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+}
+
+.ats-ai-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ats-ai-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ats-ai-tip-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.ats-ai-tip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ats-ai-section-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ats-ai-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.ats-ai-tip-text {
+  font-size: 0.875rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ats-breakdown {
+  padding-bottom: 24px;
+}
+
+.ats-breakdown-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px;
+}
+
+.ats-category {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  transition: box-shadow 0.2s ease;
+}
+
+.ats-category:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.ats-cat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ats-cat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ats-emoji {
+  font-size: 1.1rem;
+}
+
+.ats-cat-points {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ats-max-pts {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.ats-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.ats-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ats-feedback {
+  font-size: 0.85rem;
+  color: #475569;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.ats-tip {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: #f0fdf4; /* Light green tint for positive actionable tip */
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.825rem;
+  color: #16a34a;
+}
+
+.ats-tip-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* PERSISTENT STICKY FOOTER */
+.ats-footer {
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.ats-footer strong {
+  color: #334155;
+}
+
+/* ERROR & RETRY ANIMATIONS */
+.ats-ai-error {
+  font-size: 0.85rem;
+  color: #ef4444;
+  text-align: center;
+  margin: 10px 0 4px;
+  font-weight: 500;
+}
+
+.ats-ai-retry {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.825rem;
+  color: #475569;
+  cursor: pointer;
+  width: max-content;
+  margin: 4px auto 0;
+  display: block;
+  transition: all 0.2s;
+}
+
+.ats-ai-retry:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

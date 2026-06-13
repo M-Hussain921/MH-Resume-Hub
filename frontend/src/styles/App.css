@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-wrapper {
+  height: 100vh;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+}
+
+.left-side {
+  width: 50%;
+  overflow: hidden;
+  background: rgba(66, 64, 64, 0.066);
+  height: 100%;
+}
+
+.left-side-box {
+  background: white;
+  margin: 20px;
+  height: calc(100% - 40px);
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.left-side-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-side-box::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.left-side-box::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.left-side-box::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.right-side {
+  width: 50%;
+  overflow-y: auto;
+  background: rgba(251, 248, 248, 0.705);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.right-side::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-side::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.right-side::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .left-side,
+  .right-side {
+    width: 100%;
+    height: 50%;
+  }
+  
+  .left-side-box {
+    height: calc(100% - 40px);
+  }
+}

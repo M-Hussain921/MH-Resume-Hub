@@ -1,0 +1,192 @@
+.experience-section {
+  padding: 0 5px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+}
+
+.present-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  color: #16a34a;
+  font-size: 13px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.form-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.btn-remove {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.btn-remove:hover {
+  background: #fecaca;
+}
+
+.form-group {
+  margin-bottom: 8px;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 3px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.btn-add-section {
+  width: 100%;
+  padding: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px dashed #2563eb;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  transition: all 0.2s;
+}
+
+.btn-add-section:hover {
+  background: #dbeafe;
+}
+
+.empty-hint {
+  text-align: center;
+  color: #9ca3af;
+  padding: 20px;
+  font-size: 12px;
+}
+
+/* Date Input Styling */
+.date-input {
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+.date-input::placeholder {
+  color: #9ca3af;
+  font-family: monospace;
+}
+
+/* Checkbox styling */
+.form-group-checkbox {
+  margin-bottom: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #374151;
+}
+
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.checkbox-label:hover {
+  color: #1f2937;
+}
+
+/* Disabled input styling */
+.form-input:disabled,
+.form-textarea:disabled,
+.date-input:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  .btn-remove {
+    align-self: flex-start;
+  }
+}

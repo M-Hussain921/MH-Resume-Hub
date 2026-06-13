@@ -1,0 +1,188 @@
+.navbar {
+  background: white;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 25px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 20px;
+  height: 40px;
+  color: #2563eb;
+}
+
+.logo-text {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: cursive;
+  background: linear-gradient(135deg, #7da4c3, #6691ad,#a82946);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-btn svg {
+  font-size: 12px;
+}
+
+.nav-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.save-btn {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.save-btn.saving {
+  background: #f59e0b;
+  border: none;
+  color: white;
+}
+
+.save-btn.success {
+  background: #22c55e;
+  border: none;
+  color: white;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.delete-btn.deleting {
+  background: #f59e0b;
+}
+
+.delete-btn.success {
+  background: #22c55e;
+}
+
+.download-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.download-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.icon-spinner {
+  animation: spin 1s linear infinite;
+}
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+  
+  .logo-text {
+    font-size: 12px;
+  }
+  
+  .logo-icon {
+    font-size: 18px;
+  }
+  
+  .nav-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+  
+  .nav-btn svg {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    display: none;
+  }
+  
+  .nav-buttons {
+    gap: 6px;
+  }
+  
+  .nav-btn {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+  
+  .nav-btn svg {
+    font-size: 10px;
+  }
+}
