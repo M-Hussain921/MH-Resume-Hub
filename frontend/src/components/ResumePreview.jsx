@@ -14,8 +14,8 @@ import {
   FaRocket,
 } from "react-icons/fa";
 import { MdPreview } from "react-icons/md";
-import ATSScoreModal from "./ATSScoreModal";
-import "./../styles/ResumePreview.css";
+import ATSScoreModal from "./atsscoremodal";
+import "./../styles/resumepreview.css";
 
 export default function ResumePreview({ data, onClose }) {
   const [showATSScore, setShowATSScore] = useState(false);

@@ -11,7 +11,7 @@ import {
   FaGithub,
   FaSpinner,
 } from "react-icons/fa";
-import "../../styles/Admin.css";
+import "../../styles/admin.css";
 
 export default function AdminResumeDetail() {
   const { id } = useParams(); 

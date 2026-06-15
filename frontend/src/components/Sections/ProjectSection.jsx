@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import  * as api from '../../services/api.service'
-import '../../styles/Sections/ProjectSection.css';
+import '../../styles/Sections/projectsection.css';
 
 export default function ProjectSection({ projects = [], onAdd, onUpdate, onRemove,resumeId }) {
   const [apiLoading, setApiLoading] = useState(false);

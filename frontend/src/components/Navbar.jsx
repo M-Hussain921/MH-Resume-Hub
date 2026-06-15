@@ -1,6 +1,6 @@
 import { FaSave, FaTrash, FaFilePdf, FaCheckCircle, FaSpinner } from 'react-icons/fa';
 import logo from '../assets/workSphere-logo.png'
-import '../styles/Navbar.css';
+import '../styles/navbar.css';
 
 export default function Navbar({ 
   onSave, 

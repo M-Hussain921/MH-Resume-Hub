@@ -6,7 +6,7 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { MdOutlineFormatAlignLeft } from "react-icons/md";
-import "../../styles/Admin.css";
+import "../../styles/admin.css";
 
 export default function AdminLayout() {
   const { logout } = useAdminAuth();

@@ -10,7 +10,7 @@ import {
   FaChevronRight,
   FaSpinner,
 } from "react-icons/fa";
-import "../../styles/Admin.css";
+import "../../styles/admin.css";
 
 export default function AdminResumes() {
   const [resumes, setResumes]         = useState([]);

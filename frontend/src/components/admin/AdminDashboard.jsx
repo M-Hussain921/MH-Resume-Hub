@@ -7,7 +7,7 @@ import {
   FaCalendarWeek,
   FaEye,
 } from "react-icons/fa";
-import "../../styles/Admin.css";
+import "../../styles/admin.css";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState(null);

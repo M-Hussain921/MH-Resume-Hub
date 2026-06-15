@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import ResumeForm from "../../components/ResumeForm";
-import ResumePreview from "../../components/ResumePreview";
-import Navbar from "../../components/Navbar";
+import ResumeForm from "../resumeform";
+import ResumePreview from "../resumepreview";
+import Navbar from "../navbar";
 import * as api from "../../services/api.service";
 import { downloadResumeAsPDF } from "../../utils/pdfGenerator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../../styles/App.css";
+import "../../styles/app.css";
 
 function ResumeBuilderPage() {
   const [resumeData, setResumeData] = useState({

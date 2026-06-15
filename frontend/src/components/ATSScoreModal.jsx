@@ -16,7 +16,7 @@ import {
   FaCheckCircle
 } from "react-icons/fa";
 import { calculateATSScore, getScoreColor } from "../utils/atsScorer";
-import "../styles/ATSScoreModal.css";
+import "../styles/atsscoremodal.css";
 
 const CATEGORIES = [
   { key: "contactInfo", label: "Contact Info", icon: FaAddressCard },

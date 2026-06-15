@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as api from "../../services/api.service";
-import "../../styles/Sections/EducationSection.css";
+import "../../styles/Sections/educationsection.css";
 import { toast } from "react-toastify";
 
 export default function EducationSection({

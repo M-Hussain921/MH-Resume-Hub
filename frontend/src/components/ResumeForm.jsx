@@ -9,12 +9,12 @@ import {
   FaGraduationCap,
   FaRocket,
 } from "react-icons/fa";
-import PersonalSection from "./sections/PersonalSection";
-import SkillsSection from "./sections/SkillsSection";
-import ExperienceSection from "./sections/ExperienceSection";
-import EducationSection from "./sections/EducationSection";
-import ProjectSection from "./sections/ProjectSection";
-import "../styles/ResumeForm.css";
+import PersonalSection from "./Sections/personalsection";
+import SkillsSection from "./Sections/skillssection";
+import ExperienceSection from "./Sections/experiencesection";
+import EducationSection from "./Sections/educationsection";
+import ProjectSection from "./Sections/projectsection";
+import "../styles/resumeform.css";
 
 export default function ResumeForm({
   data,

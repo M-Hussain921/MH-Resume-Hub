@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as api from "../../services/api.service";
-import "../../styles/Sections/ExperienceSection.css";
+import "../../styles/Sections/experiencesection.css";
 import { toast } from "react-toastify";
 
 export default function ExperienceSection({

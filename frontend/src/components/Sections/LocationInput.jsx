@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDebounce } from '../../hooks/useDebounce';
-import { searchLocations } from '../../services/Location.service';
-import '../../styles/LocationInput.css';
+import { searchLocations } from '../../services/location.service';
+import '../../styles/locationinput.css';
 import { FaLocationPin } from 'react-icons/fa6';
 
 export default function LocationInput({ value, onChange, placeholder }) {

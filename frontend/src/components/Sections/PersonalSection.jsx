@@ -1,5 +1,5 @@
-import "../../styles/Sections/PersonalSection.css";
-import LocationInput from "./LocationInput";
+import "../../styles/Sections/personalsection.css";
+import LocationInput from "./locationinput";
 import { FaSave, FaCheckCircle, FaSpinner } from "react-icons/fa";
 import { useState } from "react";
 

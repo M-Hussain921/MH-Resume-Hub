@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAdminAuth } from "../../hooks/useAdminAuth";
 import { MdOutlineFormatAlignLeft } from "react-icons/md";
 import { FaLock, FaUser, FaSpinner } from "react-icons/fa";
-import "../../styles/Admin.css";
+import "../../styles/admin.css";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("");

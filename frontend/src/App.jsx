@@ -1,12 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import ResumeBuilderPage from "../src/components/pages/ResumeBuilderPage";
+import ResumeBuilderPage from "../src/components/pages/resumebuilderpage";
 
-import AdminLogin from "./components/admin/AdminLogin";
-import AdminLayout from "./components/admin/AdminLayout";
-import AdminDashboard from "./components/admin/AdminDashboard";
-import AdminResumes from "./components/admin/AdminResumes";
-import AdminResumeDetail from "./components/admin/AdminResumeDetails";
-import ProtectedRoute from "./components/admin/ProtectedRoute";
+import AdminLogin from "./components/admin/adminlogin";
+import AdminLayout from "./components/admin/adminlayout";
+import AdminDashboard from "./components/admin/admindashboard";
+import AdminResumes from "./components/admin/adminresumes";
+import AdminResumeDetail from "./components/admin/adminresumedetails";
+import ProtectedRoute from "./components/admin/protectedroute";
 
 function App() {
   return (
