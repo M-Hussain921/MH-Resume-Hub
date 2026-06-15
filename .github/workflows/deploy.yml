@@ -12,27 +12,28 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 18   # safer
 
     - name: Install Dependencies
       run: npm install
-      working-directory: ./frontend/ 
+      working-directory: ./frontend/
+
     - name: Build Project
       run: npm run build
-      working-directory: ./frontend/ 
+      working-directory: ./frontend/
 
-    - name: Sync Files to CyberPanel via FTP
+    - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
-        local-dir: ./frontend/dist/  
-        server-dir: /public_html/
+        protocol: ftp
+        local-dir: ./frontend/dist/
+        server-dir: /home/resumehub.mhansari.shop/public_html/ 
+        dangerous-clean-slate: true
