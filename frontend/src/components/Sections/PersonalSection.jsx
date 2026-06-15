@@ -163,6 +163,11 @@ export default function PersonalSection({
           spellCheck={false}
         />
       </div>
+      <div className="form-action">
+        <button>
+          Save
+        </button>
+      </div>
     </div>
   );
 }
