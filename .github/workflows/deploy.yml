@@ -2,8 +2,13 @@ name: Deploy Frontend to CyberPanel
 
 on:
   push:
-    branches:
-      - main 
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write 
+  pages: write
+  id-token: write   
 
 jobs:
   build-and-deploy:
@@ -12,19 +17,29 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+      env:
+        FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 18   # safer
+        node-version: '22'  
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+      env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     - name: Install Dependencies
-      run: npm install
+      run: npm ci
       working-directory: ./frontend/
 
-    - name: Build Project
+    - name: Build
       run: npm run build
       working-directory: ./frontend/
+      env:
+        VITE_API_URL: ${{secrets.VITE_API_URL}}
 
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -36,4 +51,8 @@ jobs:
         protocol: ftp
         local-dir: ./frontend/dist/
         server-dir: /home/resumehub.mhansari.shop/public_html/ 
-        dangerous-clean-slate: true
+        dangerous-clean-slate: false
+        exclude: |                 
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
