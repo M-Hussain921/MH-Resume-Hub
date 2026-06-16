@@ -42,6 +42,13 @@ jobs:
         VITE_API_URL: ${{secrets.VITE_API_URL}}
         VITE_GEOAPIFY_KEY: ${{ secrets.VITE_GEOAPIFY_KEY }}
 
+    - name: Check Build Output
+      run: |
+        echo "=== Dist folder contents ==="
+        ls -la ./frontend/dist/
+        echo "=== index.html size ==="
+        wc -c ./frontend/dist/index.html    
+
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
@@ -52,7 +59,7 @@ jobs:
         protocol: ftp
         local-dir: ./frontend/dist/
         server-dir: /home/resumehub.mhansari.shop/public_html/ 
-        dangerous-clean-slate: false
+        dangerous-clean-slate: true
         exclude: |                 
           **/.git*
           **/.git*/**
